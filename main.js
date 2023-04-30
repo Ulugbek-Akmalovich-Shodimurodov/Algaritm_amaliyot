@@ -136,3 +136,8 @@ Btn_simson.addEventListener("click", (e)=>{
                             <td>${sum}</td>
                         </tr>`
 })
+
+
+
+// 2-topshiriq misollari
+
