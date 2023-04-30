@@ -4,6 +4,8 @@ let Btn_simson = document.querySelector("#ok_simson")
 
 let Natija = document.querySelector(".natija")
 
+let ArrSum = []
+
 
 function Misol(x){
     return Math.abs(Math.sin(x + 3) * Math.log2(x * x + 3 * x + 1))
@@ -24,22 +26,22 @@ Btn.addEventListener("click", (e)=>{
 
 
     const table = document.querySelector(".tabletsiya_turt")
-    let k = 1;
+    let k = 0;
 
-    for(let delta_X = A_uzgaruvchi + h; delta_X <= B_uzgaruvchi; delta_X += h){
+    for(let delta_X = A_uzgaruvchi; delta_X <= B_uzgaruvchi; delta_X += h){
 
 
         let nat = Misol(delta_X)
         nat = Math.round(nat * 1000)/1000;
         table.innerHTML += `<tr>
-                                <td>${k++}</td>
+                                <td>F(X<sub>${k++}</sub>)</td>
                                 <td>${nat}</td>
                             </tr>`
         sum += nat
     }
-    sum = Math.round(sum * 1000)/1000;
+    sum = Math.round(h * sum * 1000)/1000;
     table.innerHTML += `<tr>
-                            <td>Summa:</td>
+                            <td>Usul natijasi:</td>
                             <td>${sum}</td>
                         </tr>`
 })
@@ -59,15 +61,15 @@ Btn_trap.addEventListener("click", (e)=>{
     let sum = 0;
 
     const table = document.querySelector(".tabletsiya_trap")
-    let k = 1;
+    let k = 0;
 
-    for(let delta_X = A_uzgaruvchi + h; delta_X <= B_uzgaruvchi; delta_X += h){
+    for(let delta_X = A_uzgaruvchi ; delta_X <= B_uzgaruvchi; delta_X += h){
 
 
         let nat = Misol(delta_X)
         nat = Math.round(nat * 1000)/1000;
         table.innerHTML += `<tr>
-                                <td>${k++}</td>
+                                <td>F(X<sub>${k++}</sub>)</td>
                                 <td>${nat}</td>
                             </tr>`
         sum += nat
@@ -81,7 +83,7 @@ Btn_trap.addEventListener("click", (e)=>{
     sum = Math.round(sum * 1000)/1000;
 
     table.innerHTML += `<tr>
-                            <td>Summa:</td>
+                            <td>Usul natijasi:</td>
                             <td>${sum}</td>
                         </tr>`
 })
@@ -101,15 +103,15 @@ Btn_simson.addEventListener("click", (e)=>{
 
 
     const table = document.querySelector(".tabletsiya_simson")
-    let k = 1;
+    let k = 0;
 
-    for(let delta_X = A_uzgaruvchi + h; delta_X <= B_uzgaruvchi; delta_X += h){
+    for(let delta_X = A_uzgaruvchi ; delta_X <= B_uzgaruvchi; delta_X += h){
 
 
         let nat = Misol(delta_X)
         nat = Math.round(nat * 1000)/1000;
         table.innerHTML += `<tr>
-                                <td>${k++}</td>
+                                <td>F(X<sub>${k++}</sub>)</td>
                                 <td>${nat}</td>
                             </tr>`
         sum += nat
@@ -123,7 +125,7 @@ Btn_simson.addEventListener("click", (e)=>{
     sum = Math.round(sum * 1000)/1000;
 
     table.innerHTML += `<tr>
-                            <td>Summa:</td>
+                            <td>Usul natijasi:</td>
                             <td>${sum}</td>
                         </tr>`
 })
