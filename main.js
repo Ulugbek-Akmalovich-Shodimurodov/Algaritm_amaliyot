@@ -39,6 +39,7 @@ Btn.addEventListener("click", (e)=>{
                             </tr>`
         sum += nat
     }
+
     sum = Math.round(h * sum * 1000)/1000;
     table.innerHTML += `<tr>
                             <td>Usul natijasi:</td>
@@ -100,6 +101,8 @@ Btn_simson.addEventListener("click", (e)=>{
     const n = 10;
     let h = (B_uzgaruvchi - A_uzgaruvchi)  / n;
     let sum = 0;
+    let toq_sum = 0;
+    let juft_sum = 0
 
 
     const table = document.querySelector(".tabletsiya_simson")
@@ -115,12 +118,16 @@ Btn_simson.addEventListener("click", (e)=>{
                                 <td>${nat}</td>
                             </tr>`
         sum += nat
+        ArrSum.push(nat);
     }
-    let y0 = Misol(A_uzgaruvchi)/2
+    for(let i = 1; i < n; i += 2){
+        toq_sum += ArrSum[i];
+        juft_sum += ArrSum[i + 1];
+    }
+    let y0 = Misol(A_uzgaruvchi)
 
-    let yn = Misol(B_uzgaruvchi)/2
-
-    sum = (sum + y0 + yn) * h;
+    let yn = Misol(B_uzgaruvchi)
+    sum = (h/3 )* (y0 + yn + 4*toq_sum + 2 * (juft_sum - ArrSum[n]));
 
     sum = Math.round(sum * 1000)/1000;
 
