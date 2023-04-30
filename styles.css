@@ -30,8 +30,8 @@ body{
     background-color: rgba(255, 255, 255, 0.6);
 
     -webkit-box-shadow: 0px 0px 29px 6px rgba(34, 60, 80, 0.2);
--moz-box-shadow: 0px 0px 29px 6px rgba(34, 60, 80, 0.2);
-box-shadow: 0px 0px 29px 6px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 29px 6px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 29px 6px rgba(34, 60, 80, 0.2);
 }
 .title{
     color: #1c84f4;
@@ -45,7 +45,7 @@ box-shadow: 0px 0px 29px 6px rgba(34, 60, 80, 0.2);
     display: flex;
     gap: 10px;
 }
-.input_n, #ok{
+.input_n, .ok{
     width: 50px;
     display: block;
 
@@ -60,8 +60,9 @@ box-shadow: 0px 0px 29px 6px rgba(34, 60, 80, 0.2);
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid #666;
     border-collapse: collapse;
+
   }
   th, td{
     padding: 5px !important;
