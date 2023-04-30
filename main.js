@@ -141,3 +141,40 @@ Btn_simson.addEventListener("click", (e)=>{
 
 // 2-topshiriq misollari
 
+// C++ da
+
+// #include <iostream>
+// #include <cmath>
+
+// using namespace std;
+
+// 	float y1(float x){
+// 	return x*x*x + 2*x + 1;
+// }
+// 	float y2(float x){
+// 	return 3*x*x + 2;
+// }
+
+// int main(){
+
+// 	float e = 0.00001;
+// 	float a, b;
+
+// 	cout<<"Oraliqni kiriting: \n";
+// 	cin>>a>>b;
+
+// 	float x = a - y1(a)/y2(a);
+
+// 	for(int i = 0; true; i++){
+
+// 		a = x;
+
+// 		x = a - y1(a)/y2(a);
+
+// 		if(e > x - a){
+// 			cout<<x;
+// 			break;
+// 		}
+// 	}
+// 	return 0;
+// }
