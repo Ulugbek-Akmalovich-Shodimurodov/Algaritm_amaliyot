@@ -61,7 +61,7 @@ Btn_trap.addEventListener("click", (e)=>{
     const table = document.querySelector(".tabletsiya_trap")
     let k = 1;
 
-    for(let delta_X = A_uzgaruvchi + h; delta_X <= B_uzgaruvchi - h; delta_X += h){
+    for(let delta_X = A_uzgaruvchi + h; delta_X <= B_uzgaruvchi; delta_X += h){
 
 
         let nat = Misol(delta_X)
@@ -103,7 +103,7 @@ Btn_simson.addEventListener("click", (e)=>{
     const table = document.querySelector(".tabletsiya_simson")
     let k = 1;
 
-    for(let delta_X = A_uzgaruvchi + h; delta_X <= B_uzgaruvchi - h; delta_X += h){
+    for(let delta_X = A_uzgaruvchi + h; delta_X <= B_uzgaruvchi; delta_X += h){
 
 
         let nat = Misol(delta_X)
